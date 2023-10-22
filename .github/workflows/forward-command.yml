@@ -1,4 +1,4 @@
-name: Forward comment to review comment
+name: Forward comment with command to review comment
 
 on:
   issue_comment:
