@@ -1,13 +1,10 @@
 name: preview
 
 on:
-  pull_request_target:
-    branches: [v3]
+  pull_request
 
 jobs:
   lint:
-    uses: ./.github/workflows/format-check.yml
-    secrets:
-      BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+    uses: ./.github/workflows/prettier.yml
   test:
     uses: ./.github/workflows/test.yml

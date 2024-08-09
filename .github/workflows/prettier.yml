@@ -1,0 +1,34 @@
+name: Prettier
+
+on:
+  workflow_call
+
+jobs:
+  format-check:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    container:
+      image: node:${{vars.NODE_VERSION}}-alpine
+    steps:
+      - name: Install git
+        run: apk add git
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Run prettier check
+        continue-on-error: true
+        run: |
+          npm run prettify:check
+          trap 'echo "STATUS_CODE=$?" >> "$GITHUB_OUTPUT"' EXIT
+        if: env.STATUS_CODE == 1
+      - name: Run prettier
+        run: npm run prettify
+      - name: Commit and push changes
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -am "chore: run prettier"
+          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.event.pull_request.head.ref }}
