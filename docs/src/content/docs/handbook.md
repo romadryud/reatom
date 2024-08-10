@@ -48,7 +48,6 @@ Most likely you will need [@reatom/npm-react](/package/npm-react/) adapter packa
 
 > The "npm-" prefix in adapter packages prevents naming collisions with ecosystem packages, as the NPM global namespace is widely used, and many common words are already taken.
 
-
 ```sh
 npm i @reatom/framework @reatom/testing @reatom/eslint-plugin @reatom/npm-react
 ```
@@ -110,8 +109,9 @@ Reactive programming can address these issues by accurately describing dependent
 Let's refactor the code using Reatom.
 
 We use the `atom` function to wrap our changeable data:
- - If you pass a primitive value to the atom, it allows the state to change.
- - If you pass a `computer` function to the atom, it creates a read-only atom that automatically recomputes when dependent atoms change, but only if the computed atom has a subscription.
+
+- If you pass a primitive value to the atom, it allows the state to change.
+- If you pass a `computer` function to the atom, it creates a read-only atom that automatically recomputes when dependent atoms change, but only if the computed atom has a subscription.
 
 ```ts
 export const nameAtom = atom(localStorage.getItem('name') ?? '')
@@ -215,9 +215,7 @@ export const submit = action(async (ctx, event) => {
   const body = new FormData()
   body.append('name', name)
 
-  const response = await ctx.schedule(() =>
-    fetch('/api/submit', { method: 'POST', body: body }),
-  )
+  const response = await ctx.schedule(() => fetch('/api/submit', { method: 'POST', body: body }))
   if (!response.ok) {
     alert(`Oups, the API is doesn't exist, this is just a test.`)
   }
@@ -261,10 +259,7 @@ export const pageAtom = atom(1, 'pageAtom').pipe(
 export const issuesReaction = reatomResource(async (ctx) => {
   const page = ctx.spy(pageAtom)
   return await ctx.schedule(() =>
-    request<IssuesResponse>(
-      `https://api.github.com/search/issues?q=reatom&page=${page}&per_page=10`,
-      ctx.controller,
-    ),
+    request<IssuesResponse>(`https://api.github.com/search/issues?q=reatom&page=${page}&per_page=10`, ctx.controller),
   )
 }, 'issuesReaction').pipe(withDataAtom({ items: [] }))
 
@@ -314,7 +309,7 @@ To view persisted actions data and explore many more features, try [reatom/logge
 Additionally, you can inspect all atom and action patches by using:
 
 ```javascript
-ctx.subscribe(logs => console.log(logs));
+ctx.subscribe((logs) => console.log(logs))
 ```
 
 ## Lifecycle

@@ -40,10 +40,10 @@ For example, in React you should manage abort strategy by yourself by `useEffect
 import { reatomAsync, withAbort, withDataAtom } from '@reatom/async'
 import { useAtom, useAction } from '@reatom/npm-react'
 
-export const fetchList = reatomAsync(
-  (ctx) => request('api/list', ctx.controller),
-  'fetchList',
-).pipe(withAbort(), withDataAtom([]))
+export const fetchList = reatomAsync((ctx) => request('api/list', ctx.controller), 'fetchList').pipe(
+  withAbort(),
+  withDataAtom([]),
+)
 
 export const List = () => {
   const [list] = useAtom(fetchList.dataAtom)
@@ -65,10 +65,7 @@ With Reatom, you can simplify it and make it more readable.
 import { reatomAsync, onConnect, withDataAtom } from '@reatom/framework'
 import { useAtom } from '@reatom/npm-react'
 
-export const fetchList = reatomAsync(
-  (ctx) => request('api/list', ctx.controller),
-  'fetchList',
-).pipe(withDataAtom([]))
+export const fetchList = reatomAsync((ctx) => request('api/list', ctx.controller), 'fetchList').pipe(withDataAtom([]))
 onConnect(fetchList.dataAtom, fetchList)
 
 export const List = () => {

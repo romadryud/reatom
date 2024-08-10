@@ -1,19 +1,8 @@
-import {
-  Atom,
-  AtomProto,
-  Ctx,
-  CtxSpy,
-  __count,
-  atom,
-  throwReatomError,
-} from '@reatom/core'
+import { Atom, AtomProto, Ctx, CtxSpy, __count, atom, throwReatomError } from '@reatom/core'
 
 type FunctionSource = string
 
-const mapAtom = atom(
-  null as any as WeakMap<AtomProto, Map<FunctionSource, Atom>>,
-  'select._map',
-)
+const mapAtom = atom(null as any as WeakMap<AtomProto, Map<FunctionSource, Atom>>, 'select._map')
 mapAtom.__reatom.initState = () => new WeakMap()
 
 const touchedMap = new WeakMap<Ctx, Set<FunctionSource>>()
