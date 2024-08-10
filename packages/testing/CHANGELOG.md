@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.4.8](https://github.com/romadryud/reatom/compare/testing-v3.4.7...testing-v3.4.8) (2024-08-10)
+
+
+### Bug Fixes
+
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+* **testing,jsx:** type improvements ([#639](https://github.com/romadryud/reatom/issues/639)) ([d343ac4](https://github.com/romadryud/reatom/commit/d343ac4f9549258851235a60e6ef01c24bc2084e))
+* **testing:** callSafelySilent ([d80f013](https://github.com/romadryud/reatom/commit/d80f0132542b5dad732228e0c49bf807dfc916ae))
+* **testing:** do not prevent error throwing ([0a9ac03](https://github.com/romadryud/reatom/commit/0a9ac03109e508449736230520bf2a14f7553aca))
+
 ## [3.4.7](https://github.com/artalar/reatom/compare/testing-v3.4.6...testing-v3.4.7) (2024-06-22)
 
 

@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.3.5](https://github.com/romadryud/reatom/compare/persist-v3.3.4...persist-v3.3.5) (2024-08-10)
+
+
+### Bug Fixes
+
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+* **persist:** rm extra cache for transactions ([5efcd57](https://github.com/romadryud/reatom/commit/5efcd5746e9e208e46b0b6b6692b823d950bc1b6))
+* **persist:** snapshotAtom init state [#885](https://github.com/romadryud/reatom/issues/885) ([209613f](https://github.com/romadryud/reatom/commit/209613f425ee06e5cd81ebddb84b25accb1c5861))
+
 ## [3.3.4](https://github.com/artalar/reatom/compare/persist-v3.3.3...persist-v3.3.4) (2024-06-26)
 
 

@@ -1,5 +1,36 @@
 # Changelog
 
+## [3.12.0](https://github.com/romadryud/reatom/compare/jsx-v3.11.3...jsx-v3.12.0) (2024-08-10)
+
+
+### Features
+
+* **jsx:** [#637](https://github.com/romadryud/reatom/issues/637) add SVG types ([2ecb8c0](https://github.com/romadryud/reatom/commit/2ecb8c0b3605032741ce7fe57f3f657452622bc0))
+* **jsx:** add mount method to handle unsubscribe ([15c4681](https://github.com/romadryud/reatom/commit/15c46813eb96e6254bc769afda2e442d47ad8ad4))
+* **jsx:** complete jsx renderer ([#733](https://github.com/romadryud/reatom/issues/733)) ([f251172](https://github.com/romadryud/reatom/commit/f251172ead5a386ec95e145ccc12845b428d93da))
+* **jsx:** fix types, add docs ([612b43f](https://github.com/romadryud/reatom/commit/612b43fa4114f66c96fb618ad4b01c67b6143408))
+* **jsx:** handle falsy like React ([#861](https://github.com/romadryud/reatom/issues/861)) ([ad52a74](https://github.com/romadryud/reatom/commit/ad52a74b8104301b702d503f050b31754c2816d4))
+* **jsx:** huge refactor, add css support ([8e0019e](https://github.com/romadryud/reatom/commit/8e0019e17299eba58d897eda18affb56c5de8b71))
+* **jsx:** nested atoms, better types ([#652](https://github.com/romadryud/reatom/issues/652)) ([3ceae78](https://github.com/romadryud/reatom/commit/3ceae788da52ff40a561ce5b2fc5371475fb7d7c))
+* **jsx:** support 'style' and 'styles' props ([#674](https://github.com/romadryud/reatom/issues/674)) ([a3ad7d8](https://github.com/romadryud/reatom/commit/a3ad7d8a5407635b876869ba5b9ab097a0f6835e))
+* **jsx:** support array children ([c555206](https://github.com/romadryud/reatom/commit/c555206b4349494912cc278b5157d9b167cc54a0))
+* **jsx:** support reatomLinkedList ([0e027e8](https://github.com/romadryud/reatom/commit/0e027e8317e10a59b9f65b0ec1070e3a5637aeca))
+
+
+### Bug Fixes
+
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **jsx:** do not allow an array in child atom ([cf178ce](https://github.com/romadryud/reatom/commit/cf178ceb951fad577ef0aad86c54d4effcb28391))
+* **jsx:** dts files ([3c4cc36](https://github.com/romadryud/reatom/commit/3c4cc36b64ddc32936521faf7491ab063b905f32))
+* **jsx:** fix $attrs ([#681](https://github.com/romadryud/reatom/issues/681)) ([d21daa1](https://github.com/romadryud/reatom/commit/d21daa1fed6f26d61afccb6d546773f866ffcf84))
+* **jsx:** mount fragment as child ([#782](https://github.com/romadryud/reatom/issues/782)) ([33a0fda](https://github.com/romadryud/reatom/commit/33a0fda91bd1ed5a384d8214baa08f0b295861f2))
+* **jsx:** render Atom&lt;SVGElement&gt; ([#869](https://github.com/romadryud/reatom/issues/869)) ([3db6ce8](https://github.com/romadryud/reatom/commit/3db6ce87dd0af2395f127561a7b098a7f64f34c0))
+* **jsx:** typed props ([#643](https://github.com/romadryud/reatom/issues/643)) ([1cd2932](https://github.com/romadryud/reatom/commit/1cd29325cf686baa9fd2668f282b3020b2512ad6))
+* **jsx:** uses createElementNS for svg ([d57bd7c](https://github.com/romadryud/reatom/commit/d57bd7c42e00ff5bdeb3d810061de0fb3b66ade8))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+* **testing,jsx:** type improvements ([#639](https://github.com/romadryud/reatom/issues/639)) ([d343ac4](https://github.com/romadryud/reatom/commit/d343ac4f9549258851235a60e6ef01c24bc2084e))
+
 ## [3.11.3](https://github.com/artalar/reatom/compare/jsx-v3.11.2...jsx-v3.11.3) (2024-06-22)
 
 

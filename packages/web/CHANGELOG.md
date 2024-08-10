@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.5.4](https://github.com/romadryud/reatom/compare/web-v3.5.3...web-v3.5.4) (2024-08-10)
+
+
+### Bug Fixes
+
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **logger:** filter changed state ([d9019a2](https://github.com/romadryud/reatom/commit/d9019a2acb34bdd09d89aa0028754269d4024852))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+
 ## [3.5.3](https://github.com/artalar/reatom/compare/web-v3.5.2...web-v3.5.3) (2024-06-22)
 
 
