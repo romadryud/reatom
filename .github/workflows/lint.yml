@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
       - name: Install dependencies
         run: npm ci --ignore-scripts
@@ -25,7 +26,7 @@ jobs:
         continue-on-error: true
         run: |
           trap 'echo "PRETTIER_EXIT_CODE=$?" >> $GITHUB_OUTPUT' EXIT; npm run prettify:check
-      - name: Fail if there no auto fix 
+      - name: Fail if there no auto fix
         if: steps.prettier_check.outputs.PRETTIER_EXIT_CODE == 2
         run: exit 2
       - name: Run prettier
@@ -36,5 +37,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: status
-          path: "status.json"
-      
+          path: 'status.json'
