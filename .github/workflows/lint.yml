@@ -45,15 +45,13 @@ jobs:
       - name: Upload artifact to trigger app for forks
         if: ${{ failure() }}
         run: |
-          json='
-            {
-              "name": "comment", 
-              "payload": {
-                "issue_number": "8",
-                "message": "CI in unable to auto fix prettier, please do it yourself by running `npm run prettify`."
-              }
+          json='{
+            "name": "comment",
+            "payload": {
+              "issue_number": "8",
+              "message": "CI is unable to auto-fix prettier, please do it yourself by running `npm run prettify`."
             }
-          ' && echo "$json" > flow.json
+          }' && echo "$json" > flow.json
       - uses: actions/upload-artifact@v4
         with:
           name: flow
