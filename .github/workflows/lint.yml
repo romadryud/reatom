@@ -34,7 +34,6 @@ jobs:
         if: steps.prettier_check.outputs.PRETTIER_EXIT_CODE == 1
         run: npm run prettify
       - name: Commit and push changes
-        continue-on-error: true
         if: ${{ success() && steps.prettier_run.conclusion == 'success' }}
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -45,15 +44,13 @@ jobs:
       - name: Upload artifact to trigger app for forks
         if: ${{ failure() }}
         run: |
-          json='
-            {
-              "name": "comment", 
-              "payload": {
-                "issue_number": "8",
-                "message": "CI in unable to auto fix prettier, please do it yourself by running `npm run prettify`."
-              }
+          json='{
+            "name": "comment",
+            "payload": {
+              "issue_number": "8",
+              "message": "CI is unable to auto-fix prettier, please do it yourself by running `npm run prettify`."
             }
-          ' && echo "$json" > flow.json
+          }' && echo "$json" > flow.json
       - uses: actions/upload-artifact@v4
         with:
           name: flow
