@@ -34,7 +34,6 @@ jobs:
         if: steps.prettier_check.outputs.PRETTIER_EXIT_CODE == 1
         run: npm run prettify
       - name: Commit and push changes
-        continue-on-error: true
         if: ${{ success() && steps.prettier_run.conclusion == 'success' }}
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
