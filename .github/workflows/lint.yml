@@ -43,6 +43,7 @@ jobs:
           git push origin HEAD:${{ github.event.pull_request.head.ref }}
       - name: Upload artifact to trigger app for forks
         if: ${{ failure() }}
+        id: upload_artifact
         run: |
           json='{
             "name": "comment",
@@ -53,6 +54,7 @@ jobs:
           }' && echo "$json" > flow.json
           ls -al
       - uses: actions/upload-artifact@v4
+        if: ${{ success() && steps.upload_artifact.conclusion == 'success' }}
         with:
           name: flow
           path: 'flow.json'
