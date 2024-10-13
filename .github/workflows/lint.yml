@@ -35,7 +35,6 @@ jobs:
         run: npm run prettify
       - name: Commit and push changes
         if: ${{ success() && steps.prettier_run.conclusion == 'success' }}
-        continue-on-error: true
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
