@@ -34,9 +34,7 @@ test('many selects should work', () => {
   const list = atom(new Array<{ value: AtomMut<number> }>())
   const target = atom((ctx) => {
     const length = select(ctx, (ctx) => ctx.spy(list).length)
-    const sum = select(ctx, (ctx) =>
-      ctx.spy(list).reduce((acc, el) => acc + ctx.spy(el.value), 0),
-    )
+    const sum = select(ctx, (ctx) => ctx.spy(list).reduce((acc, el) => acc + ctx.spy(el.value), 0))
 
     return { length, sum }
   })
@@ -61,11 +59,7 @@ test('many selects should work', () => {
 
 test('prevent select memoization errors', () => {
   const list = atom(new Array<AtomMut<{ name: string; value: number }>>())
-  const sum = atom((ctx) =>
-    ctx
-      .spy(list)
-      .reduce((acc, el) => acc + select(ctx, (ctx) => ctx.spy(el).value), 0),
-  )
+  const sum = atom((ctx) => ctx.spy(list).reduce((acc, el) => acc + select(ctx, (ctx) => ctx.spy(el).value), 0))
   const ctx = createTestCtx()
   const track = ctx.subscribeTrack(sum)
 
@@ -73,8 +67,7 @@ test('prevent select memoization errors', () => {
   assert.is(ctx.get(sum), 0)
 
   assert.throws(
-    () =>
-      list(ctx, [atom({ name: 'a', value: 1 }), atom({ name: 'b', value: 2 })]),
+    () => list(ctx, [atom({ name: 'a', value: 1 }), atom({ name: 'b', value: 2 })]),
     'Reatom error: multiple select with the same "toString" representation is not allowed',
   )
   // assert.is(track.calls.length, 2)
