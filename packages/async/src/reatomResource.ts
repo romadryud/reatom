@@ -1,21 +1,5 @@
-import {
-  Atom,
-  AtomCache,
-  Ctx,
-  Fn,
-  __count,
-  atom,
-  throwReatomError,
-  Unsubscribe,
-  AtomProto,
-} from '@reatom/core'
-import {
-  CauseContext,
-  __thenReatomed,
-  abortCauseContext,
-  onCtxAbort,
-  withAbortableSchedule,
-} from '@reatom/effects'
+import { Atom, AtomCache, Ctx, Fn, __count, atom, throwReatomError, Unsubscribe, AtomProto } from '@reatom/core'
+import { CauseContext, __thenReatomed, abortCauseContext, onCtxAbort, withAbortableSchedule } from '@reatom/effects'
 import { merge, noop, toAbortError } from '@reatom/utils'
 
 import { reatomAsync, AsyncAction, ControlledPromise, AsyncCtx } from '.'
@@ -70,9 +54,7 @@ export const reatomResource = <T>(
     if (unabort) controller.signal.addEventListener('abort', unabort)
     abortCauseContext.set(ctx.cause, (ctx.controller = controller))
 
-    const computedPromise = asyncComputed(
-      withAbortableSchedule(ctx) as AsyncCtxSpy,
-    )
+    const computedPromise = asyncComputed(withAbortableSchedule(ctx) as AsyncCtxSpy)
     computedPromise.catch(noop)
     promises.set(ctx.cause, computedPromise)
 
@@ -97,10 +79,7 @@ export const reatomResource = <T>(
     const fulfillCalls = ctx.get(theAsync.onFulfill)
     if (cached) controller.abort(toAbortError('cached'))
     if (cached && fulfillCallsBefore !== fulfillCalls) {
-      promise = Object.assign(
-        Promise.resolve(fulfillCalls[fulfillCalls.length - 1]!.payload),
-        { controller },
-      )
+      promise = Object.assign(Promise.resolve(fulfillCalls[fulfillCalls.length - 1]!.payload), { controller })
     }
 
     __thenReatomed(
@@ -134,10 +113,7 @@ export const reatomResource = <T>(
         actualize!(ctx, promiseAtom.__reatom, noop)
         const state = ctx.get(theAsync)
         const payload = state[state.length - 1]?.payload
-        throwReatomError(
-          !payload,
-          'unexpectedly failed invalidation. Please, report the issue',
-        )
+        throwReatomError(!payload, 'unexpectedly failed invalidation. Please, report the issue')
         return payload!
       }),
     theAsync,
