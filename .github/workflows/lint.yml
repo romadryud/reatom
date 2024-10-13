@@ -44,13 +44,19 @@ jobs:
           git push origin HEAD:${{ github.event.pull_request.head.ref }}
       - name: Upload artifact to trigger app for forks
         run: |
-          json='{
-            "name": "comment",
-            "payload": {
-              "issue_number": "8",
-              "message": "CI is unable to auto-fix prettier, please do it yourself by running `npm run prettify`."
+          cat <<EOF > flow.json
+            {
+              "name": "comment",
+              "payload": {
+                "issue_number": "${{ github.event.pull_request.number }}",
+                "message": "CI is unable to auto-fix prettier, please do it yourself by running \`npm run prettify\`."
+              }
             }
-          }' && echo "$json" > flow.json
+          EOF
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - uses: actions/upload-artifact@v4
         with:
           name: flow
