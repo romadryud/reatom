@@ -61,7 +61,7 @@ You can use different JSX pragmas in different files. For example, if you have a
 ```tsx
 // @jsxRuntime classic
 // @jsx h
-import { h } from '@reatom/jsx';
+import { h } from '@reatom/jsx'
 ```
 
 ## Example
@@ -74,9 +74,7 @@ Define a component:
 import { atom, action } from '@reatom/core'
 
 export const inputAtom = atom('')
-const onInput = action((ctx, event) =>
-  inputAtom(ctx, event.currentTarget.value),
-)
+const onInput = action((ctx, event) => inputAtom(ctx, event.currentTarget.value))
 export const Input = () => <input value={inputAtom} on:input={onInput} />
 ```
 
@@ -194,11 +192,7 @@ In Reatom, there is no concept of "rerender" like React. Instead, we have a spec
 
 ```tsx
 <div
-  $spread={atom((ctx) =>
-    ctx.spy(valid)
-      ? { disabled: true, readonly: true }
-      : { disabled: false, readonly: false },
-  )}
+  $spread={atom((ctx) => (ctx.spy(valid) ? { disabled: true, readonly: true } : { disabled: false, readonly: false }))}
 />
 ```
 
