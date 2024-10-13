@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
       - name: Install dependencies
         run: npm ci --ignore-scripts
@@ -25,16 +26,35 @@ jobs:
         continue-on-error: true
         run: |
           trap 'echo "PRETTIER_EXIT_CODE=$?" >> $GITHUB_OUTPUT' EXIT; npm run prettify:check
-      - name: Fail if there no auto fix 
+      - name: Fail if there no auto fix
         if: steps.prettier_check.outputs.PRETTIER_EXIT_CODE == 2
         run: exit 2
       - name: Run prettier
         id: prettier_run
         if: steps.prettier_check.outputs.PRETTIER_EXIT_CODE == 1
+        run: npm run prettify
+      - name: Commit and push changes
+        continue-on-error: true
+        if: ${{ success() && steps.prettier_run.conclusion == 'success' }}
         run: |
-          json='{"status": "1"}' && echo "$json" > status.json
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -am "chore: run prettier"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
+      - name: Upload artifact to trigger app for forks
+        if: ${{ failure() }}
+        run: |
+          json='
+            {
+              "name": "comment", 
+              "payload": {
+                "issue_number": "8",
+                "message": "CI in unable to auto fix prettier, please do it yourself by running `npm run prettify`."
+              }
+            }
+          ' && echo "$json" > flow.json
       - uses: actions/upload-artifact@v4
         with:
-          name: status
-          path: "status.json"
-      
+          name: flow
+          path: 'flow.json'
