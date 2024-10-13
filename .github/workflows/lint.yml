@@ -43,7 +43,7 @@ jobs:
           git commit -am "chore: run prettier"
           git push origin HEAD:${{ github.event.pull_request.head.ref }}
       - name: Upload artifact to trigger app for forks
-        if: ${{ failed() }}
+        if: ${{ failure() }}
         run: |
           cat <<EOF > flow.json
             {
