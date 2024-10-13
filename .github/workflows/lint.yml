@@ -55,3 +55,5 @@ jobs:
         with:
           name: flow
           path: 'flow.json'
+      - name: Exit with prettier
+        run: exit 1
