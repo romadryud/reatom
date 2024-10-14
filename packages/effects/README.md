@@ -265,9 +265,7 @@ const someRequest = reatomRequest<{ data: Data } | { error: string }>()
 
 ```ts
 // type-safe destructuring
-const { data } = await take(ctx, someRequest, (ctx, payload, skip) =>
-  'error' in payload ? skip : payload,
-)
+const { data } = await take(ctx, someRequest, (ctx, payload, skip) => ('error' in payload ? skip : payload))
 ```
 
 ### takeNested
