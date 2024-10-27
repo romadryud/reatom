@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact to trigger app for forks
         if: ${{ failure() }}
         run: |
-          cat <<EOF > flow.json
+          cat <<EOF > flow-comment.json
             {
               "name": "comment",
               "payload": {
@@ -62,6 +62,6 @@ jobs:
         if: ${{ failure() }}
         with:
           name: flow
-          path: 'flow.json'
+          path: 'flow-comment.json'
       - name: Exit with prettier
         run: exit 1
