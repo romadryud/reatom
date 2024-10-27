@@ -2,7 +2,7 @@
 
 ## Key features
 
-- **simple** and powerful abstractions.
+- **simple**  and powerful abstractions.
   <small>There are only three main primitives: `ctx`, `atom`, `action`. All other features and packages work on top of that.</small>
 - **immutable** and reliable.
   <small>All pure computations processed with atomicity guarantees.</small>
