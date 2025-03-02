@@ -1,5 +1,37 @@
 # Changelog
 
+## [3.17.0](https://github.com/romadryud/reatom/compare/async-v3.16.7...async-v3.17.0) (2025-03-02)
+
+
+### Features
+
+* **async:** add to cache setWithParams and deleteWithParams [#796](https://github.com/romadryud/reatom/issues/796) ([b53fe98](https://github.com/romadryud/reatom/commit/b53fe98b37e178735240b274336c29de6e3be1c5))
+* **async:** reset for resource ([852ba1e](https://github.com/romadryud/reatom/commit/852ba1e3a327ce7114f7c6f4cb13ae233e82a05b))
+* **primitives:** add withAssign, deprecate withReducers ([3ac66fc](https://github.com/romadryud/reatom/commit/3ac66fc76fffa4ef05e9782d93c982020188196f))
+
+
+### Bug Fixes
+
+* **async:** abort message format ([bb10f43](https://github.com/romadryud/reatom/commit/bb10f43892a87f3c4ba3c8878b483304e5f76066))
+* **async:** add AsyncStatusesAbortedSettle ([bd03669](https://github.com/romadryud/reatom/commit/bd03669bfa1814e1ce4cd28387c8de70a5d0b4d7))
+* **async:** add AsyncStatusesFirstAborted and AsyncStatusesAbortedPending ([f653bb2](https://github.com/romadryud/reatom/commit/f653bb2cd2a07eef9c062aa9477de91b06716e69))
+* **async:** cache cause handling ([be96aa1](https://github.com/romadryud/reatom/commit/be96aa1c64f5596163537bd5c8524f8cb9674490))
+* **async:** change type of dataAtom in withDataAtom operator without initState ([#785](https://github.com/romadryud/reatom/issues/785)) ([ecf44a6](https://github.com/romadryud/reatom/commit/ecf44a6039e3217cb2d45c465564a67bd21f095c))
+* **async:** drop retriesAtom if onReject returns undefined ([77e71b3](https://github.com/romadryud/reatom/commit/77e71b3cafe79732a5611d4983778ed90d95f69e))
+* **async:** first-in-win pending ([15c6d75](https://github.com/romadryud/reatom/commit/15c6d75d57d8d25a623181e38ac4812bf1cd3d24))
+* **async:** ignore abort in resource if a subscribers exists ([67bfdad](https://github.com/romadryud/reatom/commit/67bfdad05ddc7852bb781f811a39107296662154))
+* **async:** invalidation for resource cache ([8de89a3](https://github.com/romadryud/reatom/commit/8de89a382ec47de005b74a0ca211877befce9250))
+* **async:** reatomResource recursion ([6d45161](https://github.com/romadryud/reatom/commit/6d45161bfd271f9b75332da4d1eda9fa8a00adab))
+* **async:** retry concurrency ([6a43188](https://github.com/romadryud/reatom/commit/6a4318899354267d7b37b378fcf8a912cf6c7292))
+* **async:** status AsyncStatusesAbortedPending [#985](https://github.com/romadryud/reatom/issues/985) ([85e60ef](https://github.com/romadryud/reatom/commit/85e60efcd8e64df6476ee5ad13d15454307bd439))
+* **async:** use setTimeout with toJSON ([8c2ed7b](https://github.com/romadryud/reatom/commit/8c2ed7b2f5f52da6fbc1993b1253043928961f1d))
+* **async:** withAbort + reatomResource ([47d81f7](https://github.com/romadryud/reatom/commit/47d81f7aed563720692c4ecbf627d701e4cafe29))
+* **async:** withAbort strategy first-in-win ([#898](https://github.com/romadryud/reatom/issues/898)) ([0875cbb](https://github.com/romadryud/reatom/commit/0875cbb79d64551d09051bbc6e39c41ef4b4af85))
+* **effects:** concurrent abort [#1003](https://github.com/romadryud/reatom/issues/1003) ([469b0d4](https://github.com/romadryud/reatom/commit/469b0d44193b09953721db9072bc75e29b42a4c8))
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+
 ## [3.16.7](https://github.com/artalar/reatom/compare/async-v3.16.6...async-v3.16.7) (2025-02-27)
 
 

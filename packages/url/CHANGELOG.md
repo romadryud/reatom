@@ -1,5 +1,30 @@
 # Changelog
 
+## [3.10.0](https://github.com/romadryud/reatom/compare/url-v3.9.0...url-v3.10.0) (2025-03-02)
+
+
+### Features
+
+* **url:** add replace option ([c6ae085](https://github.com/romadryud/reatom/commit/c6ae0859fd246135e17379623e91a67ffeedbb59))
+* **url:** add subpath parameter ([#945](https://github.com/romadryud/reatom/issues/945)) ([e9d882d](https://github.com/romadryud/reatom/commit/e9d882d0749b5aa82a4732d3d02fbd8d65254883))
+* **url:** path instead of path ([526f9a7](https://github.com/romadryud/reatom/commit/526f9a73d4f5a4b738a6cb049f616ca4ce79fc03))
+* **url:** remove umd build ([2516fd4](https://github.com/romadryud/reatom/commit/2516fd4bb932837ebadd4ae88789b8df25eca287))
+
+
+### Bug Fixes
+
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+* **url:** computed handling ([80bb777](https://github.com/romadryud/reatom/commit/80bb777215842684cefbf0cc5bbbd5bd2ab791e0))
+* **url:** searchParamsAtom memoization ([ea1c575](https://github.com/romadryud/reatom/commit/ea1c5750971067786bd046723da7a3b7a657a955))
+* **url:** setting reinitialization ([742b303](https://github.com/romadryud/reatom/commit/742b30370ba86bed048ecbd9fddf4c02242cd2fe))
+* **url:** some bug ([c824199](https://github.com/romadryud/reatom/commit/c8241998cc36cf60b7786efbca0fd5b4b53a4ae3))
+* **url:** subpath ([fcb62d0](https://github.com/romadryud/reatom/commit/fcb62d0fb31adadd8f1d6043d40f5394049048cf))
+* **url:** subpath handling ([6f4ad7d](https://github.com/romadryud/reatom/commit/6f4ad7d247fbc788c17c8711a9ddf97c92c87767))
+* **url:** sync links with location ([17e8b54](https://github.com/romadryud/reatom/commit/17e8b54d3990745dc2498ac60eef0e0d95dd5fb2))
+* **url:** updateFromSource indirect check ([05b55ec](https://github.com/romadryud/reatom/commit/05b55ecf973dbb43e91226390bdf102c17455f88))
+
 ## [3.9.0](https://github.com/artalar/reatom/compare/url-v3.8.1...url-v3.9.0) (2025-02-16)
 
 ### Features

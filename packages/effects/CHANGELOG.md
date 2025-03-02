@@ -1,5 +1,31 @@
 # Changelog
 
+## [3.12.0](https://github.com/romadryud/reatom/compare/effects-v3.11.3...effects-v3.12.0) (2025-03-02)
+
+
+### Features
+
+* **effects:** add optional logging for the take [#987](https://github.com/romadryud/reatom/issues/987) ([c57b83a](https://github.com/romadryud/reatom/commit/c57b83a15d704ac715562cb2b143d6d908c9af41))
+* **effects:** add reaction API ([4c9d589](https://github.com/romadryud/reatom/commit/4c9d5892f733e04e575937133eca3ec51424759f))
+* **effects:** concurrent strategies ([426aedc](https://github.com/romadryud/reatom/commit/426aedcefb1b22bda21433a3dd04cb235d49af9d))
+* **effects:** explicit spawn action ([578186b](https://github.com/romadryud/reatom/commit/578186b544723ed64ff1294d558d5162d463d4b9))
+
+
+### Bug Fixes
+
+* **effects:** abort message format ([41c8b77](https://github.com/romadryud/reatom/commit/41c8b770a10e265ef9cbc24e953fd5f728ff1996))
+* **effects:** allow to use "concurrent" with CtxSpy ([4da1ab0](https://github.com/romadryud/reatom/commit/4da1ab04ecbd1de66d783c2bad2da6671981905a))
+* **effects:** concurrent abort [#1003](https://github.com/romadryud/reatom/issues/1003) ([469b0d4](https://github.com/romadryud/reatom/commit/469b0d44193b09953721db9072bc75e29b42a4c8))
+* **effects:** concurrent ctx types ([799485f](https://github.com/romadryud/reatom/commit/799485fcf4aa9096b504cc52426cec74424e0515))
+* **effects:** concurrent outdated abort handling ([23f177e](https://github.com/romadryud/reatom/commit/23f177e804546a8d43530a4c0dc764c162737513))
+* **effects:** concurrent recursion ([0ced206](https://github.com/romadryud/reatom/commit/0ced206e450de0830c138c055da00cad99d0b851))
+* **effects:** missed abort... ([66d2afd](https://github.com/romadryud/reatom/commit/66d2afd9bb6cfc1ababdffb7b547b7cee3e9425b))
+* **effects:** small refactoring ([0bc0f0b](https://github.com/romadryud/reatom/commit/0bc0f0b2cf2a1b6593019a2f8ef175f15bc81284))
+* **effects:** unable to specify CtxSpy for concurrent ([#981](https://github.com/romadryud/reatom/issues/981)) ([01af2b6](https://github.com/romadryud/reatom/commit/01af2b615b4c4c3f9ba231764c2630acfde66fa5))
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+
 ## [3.11.3](https://github.com/artalar/reatom/compare/effects-v3.11.2...effects-v3.11.3) (2025-02-27)
 
 

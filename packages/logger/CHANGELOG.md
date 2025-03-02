@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.9.0](https://github.com/romadryud/reatom/compare/logger-v3.8.4...logger-v3.9.0) (2025-03-02)
+
+
+### Features
+
+* **logger:** add experimental_reatomInspector ([f1de3db](https://github.com/romadryud/reatom/commit/f1de3db5eafb1822d974e43325b73f1f606591b5))
+* **logger:** use discoveryjs ([eef7808](https://github.com/romadryud/reatom/commit/eef7808cff6e36f16dfd97396e95f230f6dc4bda))
+
+
+### Bug Fixes
+
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **logger:** cause infinity loop ([a8af2b8](https://github.com/romadryud/reatom/commit/a8af2b824e4772e64eb6c85695eba494856e52cf))
+* **logger:** discoveryjs bundle ([0200114](https://github.com/romadryud/reatom/commit/020011447a3f379a182f4b9dbb4dc754b46a4a85))
+* **logger:** remove devtools ([613c2dc](https://github.com/romadryud/reatom/commit/613c2dcb8eb894ad49a7de71d852ed9f86ee6834))
+* **logger:** wrap nullish atom name ([#878](https://github.com/romadryud/reatom/issues/878)) ([65c90ed](https://github.com/romadryud/reatom/commit/65c90ed75c88d737a32c1e459d127980df1e4161))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+
 ## [3.8.4](https://github.com/artalar/reatom/compare/logger-v3.8.3...logger-v3.8.4) (2024-06-22)
 
 ### Bug Fixes

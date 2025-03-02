@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.7.0](https://github.com/romadryud/reatom/compare/hooks-v3.6.1...hooks-v3.7.0) (2025-03-02)
+
+
+### Features
+
+* **hooks:** onConnect abortable schedule ([bffd735](https://github.com/romadryud/reatom/commit/bffd7351eaa9d4025a4edc7f31fcfd5510811d9a))
+
+
+### Bug Fixes
+
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **hooks:** abort message format ([bd0d248](https://github.com/romadryud/reatom/commit/bd0d24830ae97ff7aefacd1208f9a4eb807e08bd))
+* **hooks:** correct isInit behaviour ([#775](https://github.com/romadryud/reatom/issues/775)) ([f61d4ac](https://github.com/romadryud/reatom/commit/f61d4acbe5603628f18c84f1ef6b3d869ec83b71))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+
 ## [3.6.1](https://github.com/artalar/reatom/compare/hooks-v3.6.0...hooks-v3.6.1) (2025-02-27)
 
 

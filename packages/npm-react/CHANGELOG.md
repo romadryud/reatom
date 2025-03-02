@@ -1,5 +1,33 @@
 # Changelog
 
+## [3.11.0](https://github.com/romadryud/reatom/compare/npm-react-v3.10.6...npm-react-v3.11.0) (2025-03-02)
+
+
+### Features
+
+* **npm-react:** add getComponentDebugName export ([e13ea3b](https://github.com/romadryud/reatom/commit/e13ea3bab108e60d4575a0054e7355a182f26553))
+* **npm-react:** add support for generic components ([#926](https://github.com/romadryud/reatom/issues/926)) ([8901e76](https://github.com/romadryud/reatom/commit/8901e76e479aed4f3b021536f822d1ef22d6739d))
+* **npm-react:** add suspense support for reatomComponent ([50075bd](https://github.com/romadryud/reatom/commit/50075bd38604e378a7200d12abb6efb77c71f525))
+
+
+### Bug Fixes
+
+* esm module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **new-package-template:** use mjs in module export ([1011671](https://github.com/romadryud/reatom/commit/10116719dd92d8102352a39e4ed772b8173d8668))
+* **npm-react:** abort message format ([f671738](https://github.com/romadryud/reatom/commit/f671738a4d6848d4ff405f933fa9bb5f1b7d8b14))
+* **npm-react:** add withAbortableSchedule to reatomComponent ([4aadfb5](https://github.com/romadryud/reatom/commit/4aadfb5c5e48193d5b3b1cddb0c148141ea8c7df))
+* **npm-react:** concurrent react ([ebb4e85](https://github.com/romadryud/reatom/commit/ebb4e852a72346093cfb4a92abaf840268ae1767))
+* **npm-react:** getComponentDebugName internals ([4c22ee5](https://github.com/romadryud/reatom/commit/4c22ee57e0f3c67487fa08f5831b4d85f1a2ddc1))
+* **npm-react:** name should contain Component word ([94e1367](https://github.com/romadryud/reatom/commit/94e1367d454cb7000115ba679dc2f424ec863a2f))
+* **npm-react:** reatomComponent displayName ([bb85630](https://github.com/romadryud/reatom/commit/bb85630d50f4ea73154c9136b29086a20046f4d1))
+* **npm-react:** reatomComponent hmr ([43abda7](https://github.com/romadryud/reatom/commit/43abda79f34526fb3329be96c4bb80ec64cf2881))
+* **npm-react:** remove console.log ([#927](https://github.com/romadryud/reatom/issues/927)) ([be53c6c](https://github.com/romadryud/reatom/commit/be53c6c92200f35ff2611ab84099a8459aeeee37))
+* **npm-react:** support react19 debug name ([65914e4](https://github.com/romadryud/reatom/commit/65914e4ac3cd4b75b3d22d3d6829b1931f7bd034))
+* **npm-react:** use named function in reatomComponent ([13d4be3](https://github.com/romadryud/reatom/commit/13d4be3d7a5627c961f431408db5eaa8be420707))
+* **npm-react:** webpack bug ([ee4b9cc](https://github.com/romadryud/reatom/commit/ee4b9cc5f4a54622a62974b18cc19ff71ee021dc))
+* **npm-react:** wrong bundle ([7ac1d74](https://github.com/romadryud/reatom/commit/7ac1d749425cf7d33890a1e9ff036b4553693a94))
+* **npm-svelte:** republish without tag ([93c7f7f](https://github.com/romadryud/reatom/commit/93c7f7f5ec58247b1b3aec854cd83b0a0ecd6a6c))
+
 ## [3.10.6](https://github.com/artalar/reatom/compare/npm-react-v3.10.5...npm-react-v3.10.6) (2025-02-27)
 
 
